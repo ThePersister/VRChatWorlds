@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowTarget : MonoBehaviour {
-
+public class FollowTarget : MonoBehaviour
+{
     [SerializeField]
     private Transform _target;
 
@@ -14,6 +14,14 @@ public class FollowTarget : MonoBehaviour {
     private float _followSpeed = 10;
 
     private Transform _transform;
+
+    public Transform Target
+    {
+        get
+        {
+            return _target;
+        }
+    }
 
 	private void Start()
     {
@@ -27,6 +35,14 @@ public class FollowTarget : MonoBehaviour {
 
     private void Follow()
     {
-        _transform.position = Vector3.Lerp(_transform.position, _target.position + _offset, Time.deltaTime * _followSpeed);
+        Debug.Log("Try to follow");
+        if (_target != null)
+        {
+            _transform.position = Vector3.Lerp(_transform.position, _target.position + _offset, Time.deltaTime * _followSpeed);
+        }
+        else
+        {
+            this.enabled = false;
+        }
     }
 }

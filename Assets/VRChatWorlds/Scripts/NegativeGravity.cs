@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class NegativeGravity : MonoBehaviour {
-
+public class NegativeGravity : MonoBehaviour
+{
     [SerializeField]
     private float _forceMultiplier = 1.0f;
 
