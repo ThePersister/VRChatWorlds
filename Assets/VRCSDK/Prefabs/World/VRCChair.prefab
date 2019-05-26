@@ -13,7 +13,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &100002
 GameObject:
@@ -26,11 +26,11 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   m_Layer: 0
-  m_Name: Seat
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &100004
 GameObject:
@@ -45,7 +45,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &100006
 GameObject:
@@ -60,7 +60,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &100008
 GameObject:
@@ -78,7 +78,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &100010
 GameObject:
@@ -91,11 +91,11 @@ GameObject:
   - component: {fileID: 3300002}
   - component: {fileID: 2300002}
   m_Layer: 0
-  m_Name: BackSupport
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &400000
 Transform:
@@ -155,9 +155,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
-  m_LocalRotation: {x: -0, y: 0.82697326, z: -0, w: -0.56224126}
-  m_LocalPosition: {x: -3.072, y: 0, z: -0.633}
-  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.43275, y: 0.03809744, z: 7.9634676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400010}
@@ -166,7 +166,7 @@ Transform:
   - {fileID: 400006}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 248.422, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -189,12 +189,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 77e302f7236266d4282ce424667e64cd, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -205,7 +204,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -223,12 +221,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 77e302f7236266d4282ce424667e64cd, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -239,7 +236,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -281,18 +277,6 @@ MonoBehaviour:
   stationEnterPlayerLocation: {fileID: 400004}
   stationExitPlayerLocation: {fileID: 400006}
   controlsObject: {fileID: 0}
-  OnRemotePlayerEnterStation:
-    TriggerObject: {fileID: 0}
-    CustomName: 
-  OnLocalPlayerEnterStation:
-    TriggerObject: {fileID: 0}
-    CustomName: 
-  OnRemotePlayerExitStation:
-    TriggerObject: {fileID: 0}
-    CustomName: 
-  OnLocalPlayerExitStation:
-    TriggerObject: {fileID: 0}
-    CustomName: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -316,6 +300,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events: []
+  CombinedNetworkId: -1
+  _dispatcher: {fileID: 0}
+  _registered: 0
 --- !u!114 &114898173168534944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,9 +356,5 @@ MonoBehaviour:
       ParameterBoolOp: 
       ParameterFloat: 
       ParameterInt: 
-    AfterSeconds: 0
     ProbabilityLock: 
     Probabilities: []
-    MidiChannel: 0
-    MidiNote: 0
-    OscAddr: 
