@@ -285,7 +285,7 @@ MonoBehaviour:
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 7
     Events:
     - Name: 
       EventType: 10
@@ -2150,7 +2150,7 @@ MonoBehaviour:
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 7
     Events:
     - Name: 
       EventType: 10
@@ -3971,7 +3971,7 @@ MonoBehaviour:
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 7
     Events:
     - Name: 
       EventType: 10
@@ -17883,7 +17883,7 @@ MonoBehaviour:
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 7
     Events:
     - Name: 
       EventType: 10
@@ -18792,7 +18792,7 @@ MonoBehaviour:
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 7
     Events:
     - Name: 
       EventType: 10
