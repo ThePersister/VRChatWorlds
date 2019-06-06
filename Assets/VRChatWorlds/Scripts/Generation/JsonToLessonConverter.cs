@@ -5,7 +5,7 @@ using UnityEngine;
 public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
 
     [SerializeField]
-    private GameObject _pagePrefab;
+    private GameObject _lessonWallPrefab;
 
     private string _jsonText;
     private string _jsonFileName = "LessonWall.json";
@@ -30,7 +30,6 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
         if (string.IsNullOrEmpty(data.error))
         {
             _jsonText = data.text;
-            Debug.Log("Read json: " + _jsonText);
         } else
         {
             Debug.Log("Failed to read json, error: " + data.error);
@@ -44,6 +43,12 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
 
     private void CreateWall(LessonModel[] lessons)
     {
+        GameObject lessonWall = GameObject.Instantiate(_lessonWallPrefab, Vector3.zero, Quaternion.identity);
+        lessonWall.GetComponent<LessonWall>().CreateUI(lessons);
+    }
+
+    private void DebugLessons(LessonModel[] lessons)
+    {
         Debug.Log("Create wall with lessons: " + lessons);
         foreach (LessonModel lesson in lessons)
         {
@@ -54,10 +59,11 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
             }
         }
     }
+}
 
-    [Serializable]
-    private struct LessonModel {
-        public string title;
-        public string[] words;
-    }
+[Serializable]
+public struct LessonModel
+{
+    public string title;
+    public string[] words;
 }

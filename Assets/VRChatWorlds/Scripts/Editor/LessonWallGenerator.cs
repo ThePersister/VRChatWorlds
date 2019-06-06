@@ -26,6 +26,7 @@ public class LessonWallGenerator : EditorWindow {
     private void SpawnWall()
     {
         JsonToLessonConverter.Instance.GenerateLessonWall();
+        EditorUtility.SetDirty(JsonToLessonConverter.Instance);
     }
 }
 
