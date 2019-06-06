@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Latern : MonoBehaviour
+public class Lantern : MonoBehaviour
 {
     [SerializeField]
     private List<MeshRenderer> _laternMeshes;
