@@ -49,6 +49,7 @@ public class Lesson : MonoBehaviour {
         }
 
         _lessonTitle.text = title;
+        this.name = title;
 
         int slotIndex = 0;
         Text currentSlot = TextSlots[0];

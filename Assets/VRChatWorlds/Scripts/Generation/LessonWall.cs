@@ -35,7 +35,10 @@ public class LessonWall : MonoBehaviour {
         int totalPageCount = _pagesHolder.childCount;
         for (int i = 0; i < totalPageCount; i++)
         {
-            _pagesHolder.GetChild(i).GetComponent<Page>().SetPageButtons(i, totalPageCount);
+            GameObject page = _pagesHolder.GetChild(i).gameObject;
+            page.GetComponent<Page>().SetPageButtons(i, totalPageCount);
+            page.SetActive(i == 0);
+            page.name = "Page" + (i + 1);
         }
     }
 }
