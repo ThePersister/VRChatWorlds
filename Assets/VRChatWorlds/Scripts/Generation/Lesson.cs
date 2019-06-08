@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class Lesson : MonoBehaviour {
 
+    [SerializeField]
+    private Text _lessonTitle;
+
+    [SerializeField]
+    private GameObject _lessonWords;
+
     private Text[] _textSlots;
 
     public Text[] TextSlots
@@ -13,10 +19,18 @@ public class Lesson : MonoBehaviour {
         {
             if (_textSlots == null)
             {
-                _textSlots = transform.GetComponentsInChildren<Text>();
+                _textSlots = _lessonWords.GetComponentsInChildren<Text>();
             }
 
             return _textSlots;
+        }
+    }
+
+    public GameObject Words
+    {
+        get
+        {
+            return _lessonWords;
         }
     }
 
@@ -34,6 +48,8 @@ public class Lesson : MonoBehaviour {
             return;
         }
 
+        _lessonTitle.text = title;
+
         int slotIndex = 0;
         Text currentSlot = TextSlots[0];
         currentSlot.text += title;
@@ -41,11 +57,10 @@ public class Lesson : MonoBehaviour {
         {
             currentSlot.text += "\n" + words[i];
 
-            if (i != 0 && i % 5 == 0)
+            if (i != 0 && (i + 1) % 5 == 0 && slotIndex < TextSlots.Length - 1)
             {
                 slotIndex += 1;
                 currentSlot = TextSlots[slotIndex];
-                currentSlot.text += "\n";
             }
         }
     }

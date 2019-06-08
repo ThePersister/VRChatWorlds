@@ -27,5 +27,15 @@ public class LessonWall : MonoBehaviour {
             }
             pageComponent.FinishPage();
         }
+        SetupPageNavigation();
+    }
+
+    private void SetupPageNavigation()
+    {
+        int totalPageCount = _pagesHolder.childCount;
+        for (int i = 0; i < totalPageCount; i++)
+        {
+            _pagesHolder.GetChild(i).GetComponent<Page>().SetPageButtons(i, totalPageCount);
+        }
     }
 }
