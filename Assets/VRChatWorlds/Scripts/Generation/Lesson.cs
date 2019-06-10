@@ -12,6 +12,7 @@ public class Lesson : MonoBehaviour {
     private GameObject _lessonWords;
 
     private Text[] _textSlots;
+    private bool _filled;
 
     public Text[] TextSlots
     {
@@ -34,6 +35,14 @@ public class Lesson : MonoBehaviour {
         }
     }
 
+    public bool Filled
+    {
+        get
+        {
+            return _filled;
+        }
+    }
+
     /// <summary>
     /// 5 words fit in each text slots, every lesson has up to 9 text slots.
     /// This code is to fill them automatically.
@@ -50,6 +59,7 @@ public class Lesson : MonoBehaviour {
 
         _lessonTitle.text = title;
         this.name = title;
+        _filled = true;
 
         int slotIndex = 0;
         Text currentSlot = TextSlots[0];

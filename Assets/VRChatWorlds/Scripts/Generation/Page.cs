@@ -44,6 +44,11 @@ public class Page : MonoBehaviour {
         for (int i = 0; i < Lessons.Length; i++)
         {
             Lessons[i].Words.SetActive(i == 0);
+
+            if (!Lessons[i].Filled)
+            {
+                Lessons[i].gameObject.SetActive(false);
+            }
         }
     }
 
