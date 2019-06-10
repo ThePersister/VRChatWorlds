@@ -10,6 +10,8 @@ public class LessonWall : MonoBehaviour {
     [SerializeField]
     private GameObject _pagePrefab;
 
+    private const int lessonsPerPage = 5;
+
     public void CreateUI(LessonModel[] lessons)
     {
         GameObject page;
@@ -17,13 +19,18 @@ public class LessonWall : MonoBehaviour {
         {
             page = GameObject.Instantiate(_pagePrefab, Vector3.zero, Quaternion.identity, _pagesHolder);
             Page pageComponent = page.GetComponent<Page>();
-            for (int x = 0; x < 5; x++)
+            for (int x = 0; x < lessonsPerPage; x++)
             {
                 pageComponent.SetLesson(lessons[i], x);
-                i++;
 
-                if (i == lessons.Length)
+                if (i == lessons.Length - 1)
+                {
                     break;
+                }
+                else if (x < lessonsPerPage - 1)
+                {
+                    i++;
+                }
             }
             pageComponent.FinishPage();
         }
