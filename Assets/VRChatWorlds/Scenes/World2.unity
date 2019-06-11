@@ -22984,11 +22984,11 @@ MonoBehaviour:
   interactTextGO: {fileID: 0}
   proximity: 2
   isHidden: 0
-  UsesAdvancedOptions: 0
+  UsesAdvancedOptions: 1
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 2
     Events:
     - Name: 
       EventType: 10
@@ -26267,11 +26267,11 @@ MonoBehaviour:
   interactTextGO: {fileID: 0}
   proximity: 2
   isHidden: 0
-  UsesAdvancedOptions: 0
+  UsesAdvancedOptions: 1
   ShowHelp: 1
   Triggers:
   - TriggerType: 17
-    BroadcastType: 4
+    BroadcastType: 2
     Events:
     - Name: 
       EventType: 10
