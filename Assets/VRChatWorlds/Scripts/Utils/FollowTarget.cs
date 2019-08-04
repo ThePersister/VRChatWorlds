@@ -35,7 +35,6 @@ public class FollowTarget : MonoBehaviour
 
     private void Follow()
     {
-        Debug.Log("Try to follow");
         if (_target != null)
         {
             _transform.position = Vector3.Lerp(_transform.position, _target.position + _offset, Time.deltaTime * _followSpeed);

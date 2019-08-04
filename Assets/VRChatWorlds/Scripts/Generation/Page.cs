@@ -29,9 +29,9 @@ public class Page : MonoBehaviour {
         }
     }
 
-    public void SetLesson(LessonModel lesson, int index)
+    public void SetLesson(LessonModel englishLesson, LessonModel koreanLesson, int index)
     {
-        Lessons[index].FillLesson(lesson.title, lesson.words);
+        Lessons[index].FillLesson(englishLesson, koreanLesson);
     }
 
     public void FinishPage()

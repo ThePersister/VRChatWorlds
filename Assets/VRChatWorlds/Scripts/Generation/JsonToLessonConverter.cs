@@ -7,8 +7,19 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
     [SerializeField]
     private GameObject _lessonWallPrefab;
 
-    private string _jsonText;
-    private string _jsonFileName = "LessonWall.json";
+    public class JsonHolder
+    {
+        public string json;
+        public string fileName;
+
+        public JsonHolder(string fileName)
+        {
+            this.fileName = fileName;
+        }
+    }
+
+    private JsonHolder _englishJsonHolder = new JsonHolder("LessonWall_en.json");
+    private JsonHolder _koreanJsonHolder = new JsonHolder("LessonWall_ko.json");
 
     public void GenerateLessonWall()
     {
@@ -17,34 +28,38 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
 
     private IEnumerator GenerateWall()
     {
-        yield return RetrieveJsonText();
-        LessonModel[] lessonWall = CreateModel();
-        CreateWall(lessonWall);
+        yield return RetrieveJsonText(_englishJsonHolder);
+        yield return RetrieveJsonText(_koreanJsonHolder);
+        LessonModel[] englishLessons = JsonHelper.FromJson<LessonModel>(_englishJsonHolder.json);
+        LessonModel[] koreanLessons = JsonHelper.FromJson<LessonModel>(_koreanJsonHolder.json);
+        Debug.Log("T, english lessons: " + englishLessons);
+        Debug.Log("T, korean lessons: " + koreanLessons);
+        CreateWall(englishLessons, koreanLessons);
     }
 
-    private IEnumerator RetrieveJsonText()
+    private void OnTranslationComplete(string result)
     {
-        WWW data = new WWW(Application.streamingAssetsPath + "/" + _jsonFileName);
+        Debug.Log("Result: " + result);
+    }
+
+    private IEnumerator RetrieveJsonText(JsonHolder jsonHolder)
+    {
+        WWW data = new WWW(Application.streamingAssetsPath + "/" + jsonHolder.fileName);
         yield return data;
 
         if (string.IsNullOrEmpty(data.error))
         {
-            _jsonText = data.text;
+            jsonHolder.json = data.text;
         } else
         {
             Debug.Log("Failed to read json, error: " + data.error);
         }
     }
 
-    private LessonModel[] CreateModel()
-    {
-        return JsonHelper.FromJson<LessonModel>(_jsonText);
-    }
-
-    private void CreateWall(LessonModel[] lessons)
+    private void CreateWall(LessonModel[] englishLessons, LessonModel[] koreanLessons)
     {
         GameObject lessonWall = GameObject.Instantiate(_lessonWallPrefab, Vector3.zero, Quaternion.identity);
-        lessonWall.GetComponent<LessonWall>().CreateUI(lessons);
+        lessonWall.GetComponent<LessonWall>().CreateUI(englishLessons, koreanLessons);
     }
 
     private void DebugLessons(LessonModel[] lessons)

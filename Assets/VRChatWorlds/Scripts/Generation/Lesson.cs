@@ -49,7 +49,7 @@ public class Lesson : MonoBehaviour {
     /// </summary>
     /// <param name="title">Title of the lesson.</param>
     /// <param name="words">Words within the lesson.</param>
-    public void FillLesson(string title, string[] words)
+    public void FillLesson(LessonModel englishLesson, LessonModel koreanLesson)
     {
         if (TextSlots.Length == 0)
         {
@@ -57,16 +57,20 @@ public class Lesson : MonoBehaviour {
             return;
         }
 
-        _lessonTitle.text = title;
+        string title = englishLesson.title;
+        string titlePlusKorean = title + "<size=108>(" + koreanLesson.title + ")</size>";
         this.name = title;
+
+        _lessonTitle.text = titlePlusKorean;
         _filled = true;
 
         int slotIndex = 0;
         Text currentSlot = TextSlots[0];
-        currentSlot.text += title;
-        for (int i = 0; i < words.Length; i++)
+        currentSlot.text += titlePlusKorean;
+        for (int i = 0; i < englishLesson.words.Length; i++)
         {
-            currentSlot.text += "\n" + words[i];
+            var word = englishLesson.words[i] + "<size=124>(" + koreanLesson.words[i] + ")</size>";
+            currentSlot.text += "\n" + word;
 
             if (i != 0 && (i + 1) % 5 == 0 && slotIndex < TextSlots.Length - 1)
             {

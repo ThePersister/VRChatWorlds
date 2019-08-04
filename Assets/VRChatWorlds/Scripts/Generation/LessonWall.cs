@@ -12,18 +12,18 @@ public class LessonWall : MonoBehaviour {
 
     private const int lessonsPerPage = 5;
 
-    public void CreateUI(LessonModel[] lessons)
+    public void CreateUI(LessonModel[] englishLessons, LessonModel[] koreanLessons)
     {
         GameObject page;
-        for (int i = 0; i < lessons.Length; i++)
+        for (int i = 0; i < englishLessons.Length; i++)
         {
             page = GameObject.Instantiate(_pagePrefab, Vector3.zero, Quaternion.identity, _pagesHolder);
             Page pageComponent = page.GetComponent<Page>();
             for (int x = 0; x < lessonsPerPage; x++)
             {
-                pageComponent.SetLesson(lessons[i], x);
+                pageComponent.SetLesson(englishLessons[i], koreanLessons[i], x);
 
-                if (i == lessons.Length - 1)
+                if (i == englishLessons.Length - 1)
                 {
                     break;
                 }

@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 224217229211637430}
   - component: {fileID: 222328683659712234}
   - component: {fileID: 114727836086565982}
-  - component: {fileID: 114292747217559264}
   m_Layer: 0
   m_Name: Text_1
   m_TagString: Untagged
@@ -410,7 +409,6 @@ GameObject:
   - component: {fileID: 224805829113982356}
   - component: {fileID: 222297626121096574}
   - component: {fileID: 114945435329766172}
-  - component: {fileID: 114572031112493022}
   m_Layer: 0
   m_Name: Text_1
   m_TagString: Untagged
@@ -513,7 +511,6 @@ GameObject:
   - component: {fileID: 224404026445756344}
   - component: {fileID: 222754985082465668}
   - component: {fileID: 114888688553020790}
-  - component: {fileID: 114683698264233418}
   m_Layer: 0
   m_Name: Text_1
   m_TagString: Untagged
@@ -824,7 +821,6 @@ GameObject:
   - component: {fileID: 224271574046448854}
   - component: {fileID: 222506056080012856}
   - component: {fileID: 114249778644484004}
-  - component: {fileID: 114813212611175576}
   m_Layer: 0
   m_Name: Text_1
   m_TagString: Untagged
@@ -877,7 +873,6 @@ GameObject:
   - component: {fileID: 224543329107786820}
   - component: {fileID: 222185504352900050}
   - component: {fileID: 114470482322987428}
-  - component: {fileID: 114147104025800400}
   m_Layer: 0
   m_Name: Text_1
   m_TagString: Untagged
@@ -2365,18 +2360,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114147104025800400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1637273764732370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1226607430, guid: f78c4655b33cb5741983dc02e08899cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: Lesson 1 Hello Born Deaf Hearing Difficult
 --- !u!114 &114151927661181782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2746,18 +2729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events: []
---- !u!114 &114292747217559264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1068971865731760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1226607430, guid: f78c4655b33cb5741983dc02e08899cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: Lesson 1 Hello Born Deaf Hearing Difficult
 --- !u!114 &114294425703813604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3671,18 +3642,6 @@ MonoBehaviour:
     MidiChannel: 0
     MidiNote: 0
     OscAddr: 
---- !u!114 &114572031112493022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305509958762342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1226607430, guid: f78c4655b33cb5741983dc02e08899cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: Lesson 1 Hello Born Deaf Hearing Difficult
 --- !u!114 &114592857190729918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3894,18 +3853,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &114683698264233418
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1379194612289240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1226607430, guid: f78c4655b33cb5741983dc02e08899cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: Lesson 1 Hello Born Deaf Hearing Difficult
 --- !u!114 &114684039537142438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4301,18 +4248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lessonTitle: {fileID: 114785000756142698}
   _lessonWords: {fileID: 1820311927994394}
---- !u!114 &114813212611175576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606643810069368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1226607430, guid: f78c4655b33cb5741983dc02e08899cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: Lesson 1 Hello Born Deaf Hearing Difficult
 --- !u!114 &114825950191601744
 MonoBehaviour:
   m_ObjectHideFlags: 1
