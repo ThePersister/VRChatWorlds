@@ -153,7 +153,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4388576672635690}
   - component: {fileID: 33876972620956896}
-  - component: {fileID: 65982100803291630}
   - component: {fileID: 23580849436994812}
   m_Layer: 0
   m_Name: Wall
@@ -204,6 +203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4962963279294528}
+  - component: {fileID: 65101327657961104}
   m_Layer: 0
   m_Name: WallRoot
   m_TagString: Untagged
@@ -1648,6 +1648,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413804450814320}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65101327657961104
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324967340089912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.5, y: 0.5, z: 0}
 --- !u!65 &65156089959156568
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1707,18 +1719,6 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 376.782, y: 319.379, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65982100803291630
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1257775343550808}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114222623969102088
 MonoBehaviour:

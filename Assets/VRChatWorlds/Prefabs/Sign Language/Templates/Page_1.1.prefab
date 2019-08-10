@@ -1899,8 +1899,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21, y: 1.81, z: 1}
-  m_Center: {x: 10, y: 0, z: 6.461786e-14}
+  m_Size: {x: 21, y: 1.81, z: 1.83}
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!65 &65311315112544114
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1911,8 +1911,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21, y: 1.81, z: 1}
-  m_Center: {x: 10, y: 0, z: 6.461786e-14}
+  m_Size: {x: 21, y: 1.81, z: 1.83}
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!65 &65367419761366656
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1923,8 +1923,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21, y: 1.81, z: 1}
-  m_Center: {x: 10, y: 0, z: 6.461786e-14}
+  m_Size: {x: 21, y: 1.81, z: 1.83}
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!65 &65622256791534554
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1947,8 +1947,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21, y: 1.81, z: 1}
-  m_Center: {x: 10, y: 0, z: 6.461786e-14}
+  m_Size: {x: 21, y: 1.81, z: 1.83}
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!65 &65812517224904440
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1959,8 +1959,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21, y: 1.81, z: 1}
-  m_Center: {x: 10, y: 0, z: 6.461786e-14}
+  m_Size: {x: 21, y: 1.81, z: 1.83}
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!114 &114000417767753072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1977,7 +1977,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 0
   m_Spacing: 350
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -2580,7 +2580,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 0
   m_Spacing: 350
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -3622,7 +3622,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 0
   m_Spacing: 350
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -3808,7 +3808,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 0
   m_Spacing: 350
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -4330,7 +4330,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 0
   m_Spacing: 350
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
