@@ -8,8 +8,6 @@ AnimatorOverrideController:
   m_Name: Dola
   m_Controller: {fileID: 9100000, guid: 596fbaf43def8a54999157a5089972da, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400054, guid: 7e5debf235ac2d54397a268de3328672, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 20bce0d32ba08f04ea26a4cd95fc542c, type: 2}
   - m_OriginalClip: {fileID: 7400064, guid: 7e5debf235ac2d54397a268de3328672, type: 3}
     m_OverrideClip: {fileID: 7400000, guid: cf3bb171ac650bd45b548c33ec29a6a0, type: 2}
   - m_OriginalClip: {fileID: 7400056, guid: 7e5debf235ac2d54397a268de3328672, type: 3}
