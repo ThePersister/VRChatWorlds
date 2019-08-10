@@ -21,7 +21,8 @@ public class LessonWall : MonoBehaviour {
             Page pageComponent = page.GetComponent<Page>();
             for (int x = 0; x < lessonsPerPage; x++)
             {
-                pageComponent.SetLesson(englishLessons[i], koreanLessons[i], x);
+                int clampedKoreanIndex = Mathf.Min(koreanLessons.Length - 1, i);
+                pageComponent.SetLesson(englishLessons[i], koreanLessons[clampedKoreanIndex], x);
 
                 if (i == englishLessons.Length - 1)
                 {

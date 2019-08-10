@@ -58,7 +58,7 @@ public class Lesson : MonoBehaviour {
         }
 
         string title = englishLesson.title;
-        string titlePlusKorean = title + "<size=108>(" + koreanLesson.title + ")</size>";
+        string titlePlusKorean = title + "<color=#4E9E4BFF><size=108>(" + koreanLesson.title + ")</size></color>";
         this.name = title;
 
         _lessonTitle.text = titlePlusKorean;
@@ -69,7 +69,10 @@ public class Lesson : MonoBehaviour {
         currentSlot.text += titlePlusKorean;
         for (int i = 0; i < englishLesson.words.Length; i++)
         {
-            var word = englishLesson.words[i] + "<size=124>(" + koreanLesson.words[i] + ")</size>";
+            var word = englishLesson.words[i];
+            if (i < koreanLesson.words.Length) {
+                word += "<color=#4E9E4BFF><size=124>(" + koreanLesson.words[i] + ")</size></color>";
+            }
             currentSlot.text += "\n" + word;
 
             if (i != 0 && (i + 1) % 5 == 0 && slotIndex < TextSlots.Length - 1)
