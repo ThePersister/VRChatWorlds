@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 4932476314334590}
   - component: {fileID: 114034617857060698}
   m_Layer: 0
-  m_Name: LessonWallRoot_Template
+  m_Name: LessonWallRoot_1.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

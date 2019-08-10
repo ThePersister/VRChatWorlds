@@ -9,7 +9,7 @@ public class Lesson : MonoBehaviour {
     private Text _lessonTitle;
 
     [SerializeField]
-    private GameObject _lessonWords;
+    private GameObject _lessonWordsCanvas;
 
     private Text[] _textSlots;
     private bool _filled;
@@ -20,18 +20,18 @@ public class Lesson : MonoBehaviour {
         {
             if (_textSlots == null)
             {
-                _textSlots = _lessonWords.GetComponentsInChildren<Text>();
+                _textSlots = _lessonWordsCanvas.GetComponentsInChildren<Text>();
             }
 
             return _textSlots;
         }
     }
 
-    public GameObject Words
+    public GameObject WordsCanvas
     {
         get
         {
-            return _lessonWords;
+            return _lessonWordsCanvas;
         }
     }
 

@@ -17,7 +17,7 @@ public class LessonWall : MonoBehaviour {
         GameObject page;
         for (int i = 0; i < englishLessons.Length; i++)
         {
-            page = GameObject.Instantiate(_pagePrefab, Vector3.zero, Quaternion.identity, _pagesHolder);
+            page = GameObject.Instantiate(_pagePrefab, _pagesHolder.transform.position, Quaternion.identity, _pagesHolder);
             Page pageComponent = page.GetComponent<Page>();
             for (int x = 0; x < lessonsPerPage; x++)
             {

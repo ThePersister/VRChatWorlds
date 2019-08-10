@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222833392998241044}
   - component: {fileID: 114244781191395892}
   m_Layer: 0
-  m_Name: Text_Template
+  m_Name: Text_1.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

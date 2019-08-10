@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 4505545347912158}
   - component: {fileID: 114222138144093182}
   m_Layer: 0
-  m_Name: Page_Template
+  m_Name: Page_1.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
