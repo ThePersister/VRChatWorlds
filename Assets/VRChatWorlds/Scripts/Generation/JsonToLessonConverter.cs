@@ -7,6 +7,9 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
     [SerializeField]
     private GameObject _lessonWallPrefab;
 
+    [SerializeField]
+    private GameObject _spawnPoint;
+
     public class JsonHolder
     {
         public string json;
@@ -58,8 +61,9 @@ public class JsonToLessonConverter : Singleton<JsonToLessonConverter> {
 
     private void CreateWall(LessonModel[] englishLessons, LessonModel[] koreanLessons)
     {
-        GameObject lessonWall = GameObject.Instantiate(_lessonWallPrefab, Vector3.zero, Quaternion.identity);
+        GameObject lessonWall = GameObject.Instantiate(_lessonWallPrefab, _spawnPoint.transform.position, Quaternion.identity, _spawnPoint.transform);
         lessonWall.GetComponent<LessonWall>().CreateUI(englishLessons, koreanLessons);
+        lessonWall.transform.rotation = _spawnPoint.transform.rotation;
     }
 
     private void DebugLessons(LessonModel[] lessons)
