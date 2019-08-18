@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class LessonWall : MonoBehaviour {
 
     private const int lessonsPerPage = 5;
 
-    public void CreateUI(LessonModel[] englishLessons, LessonModel[] koreanLessons)
+    public void CreateUI(TranslationOverride translationOverride, LessonModel[] englishLessons, LessonModel[] koreanLessons)
     {
         GameObject page;
         for (int i = 0; i < englishLessons.Length; i++)
@@ -22,7 +23,7 @@ public class LessonWall : MonoBehaviour {
             for (int x = 0; x < lessonsPerPage; x++)
             {
                 int clampedKoreanIndex = Mathf.Min(koreanLessons.Length - 1, i);
-                pageComponent.SetLesson(englishLessons[i], koreanLessons[clampedKoreanIndex], x);
+                pageComponent.SetLesson(translationOverride, englishLessons[i], koreanLessons[clampedKoreanIndex], x);
 
                 if (i == englishLessons.Length - 1)
                 {

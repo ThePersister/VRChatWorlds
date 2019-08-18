@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,9 +30,9 @@ public class Page : MonoBehaviour {
         }
     }
 
-    public void SetLesson(LessonModel englishLesson, LessonModel koreanLesson, int index)
+    public void SetLesson(TranslationOverride translationOverride, LessonModel englishLesson, LessonModel koreanLesson, int index)
     {
-        Lessons[index].FillLesson(englishLesson, koreanLesson);
+        Lessons[index].FillLesson(translationOverride, englishLesson, koreanLesson);
     }
 
     public void FinishPage()

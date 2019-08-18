@@ -49,7 +49,7 @@ public class Lesson : MonoBehaviour {
     /// </summary>
     /// <param name="title">Title of the lesson.</param>
     /// <param name="words">Words within the lesson.</param>
-    public void FillLesson(LessonModel englishLesson, LessonModel koreanLesson)
+    public void FillLesson(TranslationOverride translationOverride, LessonModel englishLesson, LessonModel koreanLesson)
     {
         if (TextSlots.Length == 0)
         {
@@ -58,7 +58,8 @@ public class Lesson : MonoBehaviour {
         }
 
         string title = englishLesson.title;
-        string titlePlusKorean = title + "<color=#4E9E4BFF><size=108>(" + koreanLesson.title + ")</size></color>";
+        string koreanTitle = translationOverride.words.ContainsKey(englishLesson.title) ? translationOverride.words[englishLesson.title] : koreanLesson.title;
+        string titlePlusKorean = title + "<color=#4E9E4BFF><size=108>(" + koreanTitle + ")</size></color>";
         this.name = title;
 
         _lessonTitle.text = titlePlusKorean;
@@ -71,7 +72,8 @@ public class Lesson : MonoBehaviour {
         {
             var word = englishLesson.words[i];
             if (i < koreanLesson.words.Length) {
-                word += "<color=#4E9E4BFF><size=124>(" + koreanLesson.words[i] + ")</size></color>";
+                string koreanWord = translationOverride.words.ContainsKey(word) ? translationOverride.words[word] : koreanLesson.words[i];
+                word += "<color=#4E9E4BFF><size=124>(" + koreanWord + ")</size></color>";
             }
             currentSlot.text += "\n" + word;
 
